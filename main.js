@@ -25,12 +25,13 @@ console.log("Exercise Two");
 var exclamation = "you've got to be kidding me";
 
 function yell(exclamation){
-  return exclamation.toUpperCase() + " ";
+  return exclamation.toUpperCase();
 }
 
 console.log(yell(exclamation));
 
 function yell10(exclamation){
+  exclamation = exclamation + " ";
   return yell(exclamation).repeat(10);
 }
 
@@ -89,15 +90,17 @@ else{
 function longest(naughtyArray, niceArray){
   if(naughtyArray.length > niceArray.length){
     var message = "Santa says you have not been very nice and should minimize your expectations for Christmas morning."
-    return message;
+    console.log(message);
+    return naughtyArray;
   }
   else if(niceArray.length > naughtyArray.length){
     var message = "Santa says Christmas should be very merry for you this year! Though of course, virtue is its own reward."
-    return message;
+    console.log(message);
+    return niceArray;
   }
   else{
     var message = "Hmmm -- remember, you might fool the console, but Santa knows . . ."
-    return message;
+    console.log(message);
   }
 }
 
